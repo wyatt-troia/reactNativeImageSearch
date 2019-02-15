@@ -1,6 +1,7 @@
 import React from "react";
 import { View, FlatList, Image, TouchableHighlight } from "react-native";
 import axios from "axios";
+import pixabayKey from "./../pixabayKey.js";
 
 module.exports = class ResultsScreen extends React.Component {
   constructor(props) {
@@ -16,9 +17,7 @@ module.exports = class ResultsScreen extends React.Component {
     const { navigation } = this.props;
     const query = navigation.getParam("query", "NO-QUERY");
     axios
-      .get(
-        `https://pixabay.com/api/?key=11612455-299ff3746b12b5c7fb0bd7295&q=${query}`
-      )
+      .get(`https://pixabay.com/api/?key=${pixabayKey}&q=${query}`)
       .then(result => {
         this.setState({ photos: result.data.hits });
       });
