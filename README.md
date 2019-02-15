@@ -30,4 +30,4 @@ The app will then run in your iOS or Androis emulator.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/wyatt-troia/mini-apps/blob/master/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/wyatt-troia/reactNativeImageSearch/blob/master/LICENSE) file for details
