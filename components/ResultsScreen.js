@@ -56,6 +56,10 @@ module.exports = class ResultsScreen extends React.Component {
           key={this.state.numColumns}
           keyExtractor={(item, index) => String(index)}
         />
+        <Image
+          style={{ width: 50, height: 50, marginBottom: 20 }}
+          source={{ uri: "https://pixabay.com/static/img/logo_square.png" }}
+        />
       </View>
     );
   }
