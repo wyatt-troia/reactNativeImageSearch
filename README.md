@@ -4,7 +4,7 @@ An free image search app, build using [React-Native](https://facebook.github.io/
 
 Submitting a search query brings the user to a results screen of thumbnails. Clicking on a thumbnail bring the user to a high-resolution version of the selected image.
 
-![Demo](https://imgur.com/VjFaQHz.gif)
+![Demo](https://imgur.com/X8HkwyE.gif)
 
 ## Getting Started
 
