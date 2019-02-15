@@ -6,7 +6,7 @@ Submitting a search query brings the user to a results screen of thumbnails. Cli
 
 ![Demo](https://imgur.com/UFjUtAb.gif)
 
-![Demo](https://imgur.com/CpYjFEu.gif)
+![Demo](https://imgur.com/nzMwxGw.gif)
 
 
 
