@@ -8,7 +8,7 @@ Submitting a search query brings the user to a results screen of thumbnails. Cli
 
 ## Getting Started
 
-Create an account on Pixabay and get your API key on [this page](https://pixabay.com/api/docs/). Create a file titled `pixabayKey.js` which consists of one line:
+Create an account on Pixabay and get your API key on [this page](https://pixabay.com/api/docs/). Create a file in the root project directory titled `pixabayKey.js` which consists of one line:
 ```
 module.exports = <YOUR_PIXABAY_KEY_AS_A_STRING>;
 ```
