@@ -2,8 +2,9 @@ import React from "react";
 import { View, FlatList, Image, TouchableHighlight } from "react-native";
 import axios from "axios";
 import pixabayKey from "./../pixabayKey.js";
+import { withGlobalContext } from "./../GlobalContext.js";
 
-module.exports = class ResultsScreen extends React.Component {
+class ResultsScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = { query: "" };
@@ -19,7 +20,7 @@ module.exports = class ResultsScreen extends React.Component {
     axios
       .get(`https://pixabay.com/api/?key=${pixabayKey}&q=${query}`)
       .then(result => {
-        this.setState({ photos: result.data.hits });
+        this.props.global.updateImages(result.data.hits);
       });
   }
 
@@ -38,7 +39,7 @@ module.exports = class ResultsScreen extends React.Component {
       >
         <FlatList
           numColumns={this.state.numColumns}
-          data={this.state.photos || []}
+          data={this.props.global.images}
           renderItem={({ item }) => (
             <TouchableHighlight
               onPress={() => {
@@ -63,4 +64,6 @@ module.exports = class ResultsScreen extends React.Component {
       </View>
     );
   }
-};
+}
+
+module.exports = withGlobalContext(ResultsScreen);
