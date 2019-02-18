@@ -2,14 +2,11 @@ import React from "react";
 import { Button, View, TextInput } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-const PlaceholderContext = React.createContext("Search free images");
-
 module.exports = class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = { query: "" };
   }
-  static contextType = PlaceholderContext;
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
@@ -32,7 +29,7 @@ module.exports = class HomeScreen extends React.Component {
               fontSize: 20,
               textAlign: "center"
             }}
-            placeholder={this.context}
+            placeholder="Search free images"
             onChangeText={query => this.setState({ query })}
           />
         </View>
