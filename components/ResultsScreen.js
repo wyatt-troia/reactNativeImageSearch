@@ -43,9 +43,8 @@ class ResultsScreen extends React.Component {
           renderItem={({ item }) => (
             <TouchableHighlight
               onPress={() => {
-                this.props.navigation.navigate("Detail", {
-                  photo: item
-                });
+                this.props.global.updateDetailImage(item);
+                this.props.navigation.navigate("Detail");
               }}
             >
               <Image

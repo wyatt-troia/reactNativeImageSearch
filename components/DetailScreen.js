@@ -1,10 +1,10 @@
 import React from "react";
 import { Image } from "react-native";
+import { withGlobalContext } from "./../GlobalContext.js";
 
-module.exports = class DetailScreen extends React.Component {
+class DetailScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { text: "" };
   }
 
   static navigationOptions = {
@@ -12,15 +12,16 @@ module.exports = class DetailScreen extends React.Component {
   };
 
   render() {
-    const { navigation } = this.props;
-    const photo = navigation.getParam("photo", "NO-PHOTO");
+    const image = this.props.global.detailImage;
 
     return (
       <Image
         style={{ flex: 1, height: undefined, width: undefined }}
         resizeMode="contain"
-        source={{ uri: photo.largeImageURL }}
+        source={{ uri: image.largeImageURL }}
       />
     );
   }
-};
+}
+
+module.exports = withGlobalContext(DetailScreen);
